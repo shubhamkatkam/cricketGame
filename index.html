@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Cricket Game</title>
+  <link rel="stylesheet" href="CricketGame.css">
+</head>
+<body>
+  <div class="container">
+  <h1>Bat Ball Stump Game</h1>
+  <button class="choice-button" onclick="
+  let computerChoice = generateComputerChoice();
+  let resultMsg = getResult('Bat', computerChoice);
+  showResult('Bat', computerChoice, resultMsg);
+  ">
+    <img src="image/bat.png" alt="Bat Image" class="choice-image">  
+  </button>
+
+  <button class="choice-button" onclick="
+    computerChoice = generateComputerChoice();
+    resultMsg = getResult('Ball', computerChoice);
+    showResult('Ball', computerChoice, resultMsg);
+  ">
+    <img src="image/ball.png" alt="Ball Image" class="choice-image">  
+  </button>
+
+  <button class="choice-button" onclick="
+    computerChoice = generateComputerChoice();
+    resultMsg = getResult('Stump', computerChoice);
+    showResult('Stump', computerChoice, resultMsg);
+  ">
+    <img src="image/stump.png" alt="Stump Image" class="choice-image">
+  </button>
+  <div class="result-contanier">
+  <h3 id="user-move"></h3>
+  <h3 id="computer-move"></h3>
+  <h3 id="result"></h3>
+  <h3 id="score"></h3></div>
+  <button class="reset"onclick="localStorage.clear()
+      resetScore();
+  ">Restart</button>
+    </div>
+<script src="cricketGame.js"></script>
+</body>
+</html>
